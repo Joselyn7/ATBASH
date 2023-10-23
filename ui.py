@@ -22,7 +22,7 @@ def create_ui():
     input_label = tk.Label(input_frame, text="Descifrar texto:")
     input_text = tk.Text(input_frame, height=10, width=30)
     input_label_o = tk.Label(input_frame, text=" -o- ")
-    load_button = tk.Button(input_frame, text="Cargar archivo", command=load_file)
+    load_button = tk.Button(input_frame, text="Cargar archivo", command=lambda: load_file(input_text))
 
     input_label.grid(row=0, column=0, columnspan=3)
     input_text.grid(row=1, column=0, columnspan=3)
@@ -48,7 +48,7 @@ def create_ui():
     result_text = tk.Text(result_frame, height=10, width=30)
 
     input_label_o2 = tk.Label(result_frame, text=" -o- ")
-    save_button = tk.Button(result_frame, text="Guardar resultado", command=save_result)
+    save_button = tk.Button(result_frame, text="Guardar resultado", command=lambda: save_result(result_text))
 
     result_label.grid(row=0, column=0, columnspan=2)
     result_text.grid(row=1, column=0, columnspan=2)
